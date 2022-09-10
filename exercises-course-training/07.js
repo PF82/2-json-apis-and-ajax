@@ -24,8 +24,7 @@ Add code to use the imageLink and altText properties in an img tag.
         json.forEach(function(val) {
           html += "<div class = 'cat'>";
           // Add your code below this line
-
-
+          html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
           // Add your code above this line
           html += "</div><br>";
         });

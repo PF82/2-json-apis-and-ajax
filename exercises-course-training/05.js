@@ -8,6 +8,7 @@ Now you'll take a closer look at the returned data to better understand the JSON
 [ ] -> Square brackets represent an array.
 { } -> Curly brackets represent an object.
 " " -> Double quotes represent a string. They are also used for key names in JSON.
+
 Understanding the structure of the data that an API returns is important because it influences how you retrieve the values you need.
 
 On the right, click the Get Message button to load the freeCodeCamp Cat Photo API JSON into the HTML.
@@ -46,7 +47,7 @@ on the object (which is saved in the variable json) to access the value.
         const json = JSON.parse(req.responseText);
         document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
         // Add your code below this line
-
+        console.log(json[2].codeNames[1]);
         // Add your code above this line
       };
     };

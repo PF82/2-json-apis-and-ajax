@@ -24,7 +24,7 @@ The then method also returns a Promise, which is handled by the next then method
 object you are looking for!
 
 Now, it selects the element that will receive the data by using document.getElementById(). Then it modifies the HTML code of 
-he element by inserting a string created from the JSON object returned from the request.
+the element by inserting a string created from the JSON object returned from the request.
 
 Update the code to create and send a GET request to the freeCodeCamp Cat Photo API. But this time, using the fetch method 
 instead of XMLHttpRequest.
@@ -34,8 +34,11 @@ instead of XMLHttpRequest.
   document.addEventListener('DOMContentLoaded',function(){
     document.getElementById('getMessage').onclick= () => {
       // Add your code below this line
-
-
+      fetch('/json/cats.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('message').innerHTML = JSON.stringify(data);
+      })
       // Add your code above this line
     };
   });
