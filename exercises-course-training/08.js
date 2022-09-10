@@ -25,8 +25,9 @@ Add code to filter the json data to remove the cat with the id value of 1.
         let json = JSON.parse(req.responseText);
         let html = "";
         // Add your code below this line
-
-
+        json = json.filter(function(val) {
+          return (val.id !== 1);
+        });
         // Add your code above this line
          json.forEach(function(val) {
            html += "<div class = 'cat'>"
